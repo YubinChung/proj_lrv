@@ -513,7 +513,7 @@ body a.btn_st3:hover {
 .body_contact .sub_header .breadcrumb {
     border-top: 0;
 }
-.contact input[type="text"], textarea {
+.body_contact input[type="text"], textarea {
     width: 100%;
     border: 2px solid #e9e9e9;
     border-radius: 2px;
@@ -524,7 +524,7 @@ body a.btn_st3:hover {
     resize: none;
 }
 
-.con_tact .col_2_wrap .col_2_wrap .inner div:first-child {width: 45%;}
+
 input[type="submit"] {
     position: static;
     border: none;
@@ -544,7 +544,7 @@ input[type="submit"] {
     color: #fab702;
 }
 
-.contact .col_2_wrap p {
+.body_contact .col_2_wrap p {
     margin-bottom: 30px;
 }
 .google_map{width:545px;height:423px}

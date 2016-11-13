@@ -12,13 +12,16 @@
 */
 
 
+Route::get('/', 'PageController@home');
+Route::get('{page_id}', 'pageController@page' );
 
-Route::get('/{page_id?}', function ($page_id='home') {
-	$page_name2 = '';
-	$page_name2	.= 'layouts.' . $page_id;
-	
-	return view($page_name2, ['page_name' => $page_id, 'site_title' => 'CONSRTUCTION']);
-});
+
+//Route::get('/{page_id?}', function ($page_id='home') {
+//	$page_name2 = '';
+//	$page_name2	.= 'layouts.' . $page_id;
+//	
+//	return view($page_name2, ['page_name' => $page_id, 'site_title' => 'CONSRTUCTION']);
+//});
 
 //Route::get('/', function () {
 //    return view('layouts.home', ['page_name' => 'home']);

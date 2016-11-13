@@ -1,7 +1,7 @@
 <header>
 	<section class="logo">
 		<div class="inner">
-		<h1><a href="/" class="logo" title="{{ $site_title }}">{{ $site_title }}</a></h1>
+		<h1><a href="/" class="logo" title="{{ $site_title }}"></a></h1>
 		</div>
 	</section>
 	<section class="sns">
@@ -25,14 +25,14 @@
 </header>
 <section class="sub_header">
 	<div class="inner">
-		<h2>{{ $page_name }}</h2>
+		<h2>{{ $page_id }}</h2>
 		<a href="##" title="GET IN TOUCH">GET IN TOUCH</a>
 	</div>
 	<div class="breadcrumb">
 		<div class="inner">
 			<ul>
 				<li><a href="/" title="">{{ $site_title }}</a></li>
-				<li><a href="##" title="">{{ $page_name }}</a></li>
+				<li><a href="##" title="">{{ $page_id }}</a></li>
 			</ul>
 		</div>
 	</div>
