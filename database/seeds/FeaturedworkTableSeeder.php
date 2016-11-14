@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class DatabaseSeeder extends Seeder
+class FeaturedworkTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,7 +11,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-		$this->call(FeaturedworkTableSeeder::class);
-		
-	}
+        App\Featuredwork::truncate();
+		factory('App\Featuredwork', 10)->create();
+    }
 }

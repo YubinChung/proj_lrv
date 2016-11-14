@@ -14,12 +14,11 @@ class CreateFeaturedworkTable extends Migration
     public function up()
     {
         Schema::create('Featuredworks', function (Blueprint $table) {
-            $table->increments('id');
-			$table->integer('Featuredworks_id')->unsigned();
-			$table->foreign('Featuredworks_id')->references('id')->on('Featuredworks');
-            $table->string('name', 50);
+            //$table->increments('id');
+            $table->string('name');
 			$table->text('description')->nullable();
-			$table->timestamps();]
+			$table->text('detail_link');
+			$table->timestamps();
         });
     }
 

@@ -47,12 +47,10 @@ $factory->define(App\Task::class, function (Faker\Generator $faker) {
 });
 
 $factory->define(App\Featuredwork::class, function (Faker\Generator $faker) {
-    $min = App\Featuredwork::min('id');
-    $max = App\Featuredwork::max('id');
+
     return [
-        'Featuredworks_id'   => $faker->numberBetween($min, $max), //User 테이블의 ID 값 기준으로 생성함
         'name'      => $faker->word, 
-		'description' => $faker->text,
+		'description' => $faker->paragraph,
         'created_at' => $faker->dateTimeBetween($startDate = '-2 years', $endDate = '-1 years'),//과거 2년에서 1년 사이 데이터
         'updated_at' => $faker->dateTimeBetween($startDate = '-2 years', $endDate = '-1 years'),
     ];
