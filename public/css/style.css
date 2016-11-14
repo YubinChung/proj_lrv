@@ -350,7 +350,7 @@ h3.tit_st1:after {content: "";display: block;position: absolute;height: 2px;widt
     padding: 30px 2.5% 70px;
     box-sizing: border-box;
 }
-.home .col_3 h5 {
+.body_home .col_3 h5 {
     color: #333;
     line-height: 100%;
     font-size: 1rem;
@@ -364,7 +364,7 @@ h3.tit_st1:after {content: "";display: block;position: absolute;height: 2px;widt
 .main_wwu * {color: #fff;text-transform: uppercase}
 .main_wwu span{line-height:100%;font-size:0.85rem;}
 .main_wwu h2 {font-size: 1.75rem;line-height: 2.5rem;margin: 5px 0 22px;}
-.content_wrap.home article p+a{margin-top:13px;}
+.body_home .content_wrap article p+a{margin-top:13px;}
 
 .pager{
     position: absolute;
