@@ -11,39 +11,17 @@
 |
 */
 
+//todo list
+Route::get('/todo', 'TodoMainController@index');
+Route::post('/todo', 'TodoController@store');
+Route::post('/todo/done/{id}', ['as' => 'todo', 'uses' =>'TodoController@done']);
+Route::post('/todo/{id?}', 'TodoController@destroy');
 
-Route::get('/', 'PageController@home');
-Route::get('{page_id}', 'pageController@page' );
+// Route::resource('todo', 'TodoController');
 
-
-//Route::get('/{page_id?}', function ($page_id='home') {
-//	$page_name2 = '';
-//	$page_name2	.= 'layouts.' . $page_id;
-//	
-//	return view($page_name2, ['page_name' => $page_id, 'site_title' => 'CONSRTUCTION']);
-//});
-
-//Route::get('/', function () {
-//    return view('layouts.home', ['page_name' => 'home']);
-//});
-//Route::get('/about', function () {
-//	return view('layouts.about', ['page_name' => 'about']);
-//	
-//});
-//Route::get('/portfolio', function () {
-//    return view('layouts.portfolio', ['page_name' => 'portfolio']);
-//});
-//
-//Route::get('/contact', function () {
-//    return view('layouts.contact', ['page_name' => 'contact']);
-//});
+// page
+Route::get('/', 'pageController@home');
+Route::get('/{page_id}', 'pageController@page' );
 
 
 
-
-
-//Route::get('/{id}', function ($id) {
-//	
-//	return view('layouts.$id');
-//	
-//});

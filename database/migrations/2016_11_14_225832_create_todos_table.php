@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateFeaturedworkTable extends Migration
+class CreateTodosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,15 @@ class CreateFeaturedworkTable extends Migration
      */
     public function up()
     {
-        Schema::create('featuredworks', function (Blueprint $table) {
+        Schema::create('todos', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
-			$table->text('description')->nullable();
-			$table->text('detail_link');
+			$table->string('title');
+			$table->tinyInteger('done');
 			$table->timestamps();
+			
+
         });
+		
     }
 
     /**
@@ -29,7 +31,7 @@ class CreateFeaturedworkTable extends Migration
      */
     public function down()
     {
-        Schema::drop('Featuredworks');
-		Schema::dropIfExists('Featuredworks');
+        Schema::drop('todos');
+        Schema::dropIfExists('todos');
     }
 }

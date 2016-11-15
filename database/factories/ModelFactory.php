@@ -51,6 +51,7 @@ $factory->define(App\Featuredwork::class, function (Faker\Generator $faker) {
     return [
         'name'      => $faker->word, 
 		'description' => $faker->paragraph,
+		'detail_link' => $faker->word,
         'created_at' => $faker->dateTimeBetween($startDate = '-2 years', $endDate = '-1 years'),//과거 2년에서 1년 사이 데이터
         'updated_at' => $faker->dateTimeBetween($startDate = '-2 years', $endDate = '-1 years'),
     ];

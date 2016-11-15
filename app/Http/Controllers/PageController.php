@@ -12,6 +12,7 @@ class PageController extends Controller
 	}
 	
     public function page($page_id){
+			
 		$page_uri = '';
 		$page_uri .= 'layouts.' . $page_id;
 		

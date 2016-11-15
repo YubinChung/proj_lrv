@@ -12,6 +12,6 @@ class FeaturedworkTableSeeder extends Seeder
     public function run()
     {
         App\Featuredwork::truncate();
-		factory('App\Featuredwork', 10)->create();
+		
     }
 }
