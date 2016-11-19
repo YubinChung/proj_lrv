@@ -15,12 +15,19 @@
 Route::get('/todo', 'TodoMainController@index');
 Route::post('/todo', 'TodoController@store');
 Route::post('/todo/done/{id}', ['as' => 'todo', 'uses' =>'TodoController@done']);
-Route::post('/todo/{id?}', 'TodoController@destroy');
+Route::post('/todo/{id}', ['as' => 'todo', 'uses' =>'TodoController@destroy']);
 
 // Route::resource('todo', 'TodoController');
 
+
+// board 
+Route::resource('/post', 'PostController');
+
+
+
 // page
-Route::get('/', 'pageController@home');
+//Route::resource('/{id?}', 'pageController' );
+Route::get('/', 'pageController@index');
 Route::get('/{page_id}', 'pageController@page' );
 
 

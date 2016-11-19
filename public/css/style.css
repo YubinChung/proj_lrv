@@ -60,8 +60,8 @@ header .inner div {
     text-align: right;
 }
 
-header .logo a {display:block;width: 179px;background: url(../images/logo.jpg) no-repeat 0 50%;height: 26px;padding: 43px 0;text-indent:-9999em;overflow: hidden;z-index: 100;position: relative;}
-.body_home .logo a {margin: 45px auto 0;}
+header .logo a {display:block;width: 179px;background: url(../images/logo.jpg) no-repeat 0 50%;height: 26px;margin: 43px 0;text-indent:-9999em;overflow: hidden;z-index: 100;position: relative;}
+.body_home .logo a {margin: 90px auto 45px;}
 
 header nav {
     position: absolute;
@@ -86,10 +86,15 @@ nav ul li a,
     font-size: 0.85rem;
     padding: 17px 19px;
     margin: 0;
+    text-transform: capitalize;
 }
-nav ul li a:hover,
-.body_portfolio .content_wrap ul.sort_list li a:hover,
-.body_portfolio .content_wrap ul.sort_list li a.active{color:#fab702;font-weight: bold;}
+nav ul li a:hover, 
+.body_portfolio .content_wrap ul.sort_list li a:hover, 
+.body_portfolio .content_wrap ul.sort_list li a.active,
+.body_home nav ul li:nth-child(1) a, 
+.body_about nav ul li:nth-child(2) a, 
+.body_portfolio nav ul li:nth-child(3) a,
+.body_contact nav ul li:nth-child(4) a{color:#fab702;font-weight: bold;}
 nav ul li:last-child a {
     padding-right: 0;
 }
@@ -137,6 +142,8 @@ nav ul li:last-child a {
     padding: 20px 0;
     border-top: 1px solid #ddd;
     background-color: #fff;
+    border-radius: 0;
+    margin-bottom: 0;
 }
 
 .sub_header .breadcrumb li a:before {
@@ -219,19 +226,9 @@ nav ul li:last-child a {
     padding: 50px 0;overflow: hidden;
 }
 
-.body_about .content_wrap .inner div,
-.body_portfolio .content_wrap .inner div,
-.main_wwd .inner div,
-.main_fw .inner div,
-.main_news .inner div{margin-left: -3.4333%;}
-.body_about .content_wrap article,
-.body_portfolio .content_wrap article,
-.main_wwd .inner div article,
-.main_fw .inner div article,
-.main_news .inner div article{
-    width: 29.9%;
-    float: left;
-    margin-left: 3.4333%;margin-bottom:40px;
+
+.body_about .content_wrap article,  .main_wwd .inner div article, .main_fw .inner div article, .main_news .inner div article{
+    margin-bottom:40px;
 }
 
 figure img {
@@ -311,7 +308,7 @@ body .btn_st1 {
     display: block;
 }
 
-.main_img_wrap .article_wrap article a.video:after {content: "\f04b";width: 23px;height: 26px;display: block;position: absolute;right: 20px;top: 20px;color: #fff;font-family: fontAwesome;font-size: 13px;border: 2px solid #fff;border-radius: 50%;line-height: 27px;text-align: center;padding-left: 3px;}
+.main_img_wrap .article_wrap article a.video:after {content: "\f04b";width: 26px;height: 26px;display: block;position: absolute;right: 20px;top: 20px;color: #fff;font-family: fontAwesome;font-size: 12px;border: 2px solid #fff;border-radius: 50%;line-height: 24px;text-align: center;padding-left: 2px;}
 
 .main_img_wrap .article_wrap article h3 {
     margin-top: 25px;
@@ -343,14 +340,12 @@ h3.tit_st1:after {content: "";display: block;position: absolute;height: 2px;widt
 
 .bg_b h3.tit_st1 {color:#fff;}
 .bg_b h3.tit_st1:after{background-color:#444;}
-.col_3 {
-    width: 33.333%;
-    float: left;
-    text-align: center;
-    padding: 30px 2.5% 70px;
-    box-sizing: border-box;
+.main_us .row .col-md-4 {
+    
+    padding-top: 30px;padding-bottom:70px;
+    
 }
-.body_home .col_3 h5 {
+.row.text-center .col-md-4 h5 {
     color: #333;
     line-height: 100%;
     font-size: 1rem;
@@ -370,10 +365,11 @@ h3.tit_st1:after {content: "";display: block;position: absolute;height: 2px;widt
     position: absolute;
     right: 0;
     top: 16px;
+    margin: 0;
 }
 .pager li{display:inline-block;}
-.pager li a{display: block;width: 35px;height: 35px;line-height: 35px;font-size: 1rem;border: 2px solid rgba(204, 204, 204, 0.5);color: rgba(204, 204, 204, 0.5);text-align: center;}
-.pager li a:hover{border-color:#fab702;color:#fab702;text-decoration: none;}
+.pager li a{display: block;width: 35px;height: 35px;line-height: 35px;font-size: 1rem;border: 2px solid rgba(204, 204, 204, 0.5);color: rgba(204, 204, 204, 0.5);text-align: center;padding: 0;border-radius: 0;background-color: transparent;}
+.pager li a:hover{border-color:#fab702;color:#fab702;text-decoration: none;background-color: transparent;}
 
 .main_fw {
     padding: 20px 0 0;
@@ -419,7 +415,18 @@ body a.btn_st3:hover {
     box-shadow: 0 1px 1px #777;
 }
 
-.main_tm .inner div p {
+.main_oc.col-md-6{padding-left:0;padding-right:30px;}
+.main_tm.col-md-6{padding-right:0;padding-left:30px;}
+.main_oc.col-md-6:last-child{padding-right:0;}
+.main_oc.col-md-6 .row {display:flex;border-bottom:1px solid #e9e9e9;border-right:1px solid #e9e9e9;flex-wrap: wrap;margin-left: 0;}
+.main_oc.col-md-6 .row .col-md-4 {flex-grow:3;border-top:1px solid #e9e9e9;border-left:1px solid #e9e9e9;padding: 15px 0;display: flex;align-items: center;}
+.main_oc.col-md-6 .row .col-md-4 * {
+    vertical-align: middle;
+}
+.main_oc.col-md-6 .row .col-md-4 a{
+    margin: 0 auto;
+}
+.main_tm.col-md-6 div p {
     border: 1px solid #e9e9e9;
     padding: 15px 20px 35px;
     box-sizing: border-box;
@@ -444,10 +451,6 @@ body a.btn_st3:hover {
     color: #333;
     font-size: 0.9rem;
 }
-.col_2_wrap> .inner >div{width: 48%;float: left;box-sizing:border-box;position: relative;}
-.col_2_wrap> .inner >div:first-child {
-    margin-right: 4%;
-}
 
 
 
@@ -459,12 +462,10 @@ body a.btn_st3:hover {
 .body_portfolio .content_wrap .inner div article,
 .main_fw .inner div article{position: relative;}
 .body_portfolio .content_wrap article {
-    width: 30.77%;
-    margin-left: 2.55%;
     margin-bottom: 2.55%;
 }
 .body_portfolio .content_wrap .inner div article figure +span,
-.main_fw .inner div article figure + span{position: absolute;left: 0;right: 0;overflow: hidden;transition: height 0.5s, background-color 0.5s;-webkit-transition: height 0.5s, background-color 0.5s;font-size: 0.85rem;color: #fff;bottom: 0;height: 0;}
+.main_fw .inner div article figure + span{position: absolute;left: 15px;right: 15px;overflow: hidden;transition: height 0.5s, background-color 0.5s;-webkit-transition: height 0.5s, background-color 0.5s;font-size: 0.85rem;color: #fff;bottom: 0;height: 0;}
 .body_portfolio .content_wrap .inner div article:hover figure+span,
 .main_fw .inner div article:hover figure+span{
     background-color: rgba(0, 0, 0, 0.51);
@@ -488,7 +489,7 @@ body a.btn_st3:hover {
     background-size: cover;
     height: 416px;
 }
-.body_contact header .logo a{background-image:url(../images/logo_w.png)}
+.body_contact header .logo a{background-image:url(../images/logo_w.png);margin: 0;padding-top: 71px;background-position: 0px 100%;}
 .body_contact header ul.sns_list li a,
 .body_contact header nav ul li a {
     color: #fff;
@@ -533,7 +534,7 @@ input[type="submit"] {
     letter-spacing: 1px;
 }
 
-.col_2_wrap .col_2_wrap h3 {
+.body_contact .col-md-6 h3 {
     color: #333;
     text-transform: uppercase;
     font-size: 1rem;
@@ -544,7 +545,7 @@ input[type="submit"] {
     color: #fab702;
 }
 
-.body_contact .col_2_wrap p {
+.body_contact .col-md-6 p {
     margin-bottom: 30px;
 }
 .google_map{width:545px;height:423px}
@@ -558,38 +559,39 @@ footer .service_menu{position: absolute;right:0;top: 28px;}
 footer .service_menu li{display: inline-block;margin-left: 6px;}
 footer .service_menu a {color:#fff;}
 
-footer .col_4 h3 {
+footer .col-md-3 h3 {
         font-size: 1rem;
     margin-top: auto;
     margin-bottom: 30px;
     letter-spacing: 1px;
 }
 
-footer .col_4 p {
+footer .col-md-3 p {
     color: #999;
     margin-bottom: 20px;
 }
 
-footer .col_4 {
+footer .col-md-3 {
     float: left;
     width: 25%;
     box-sizing: border-box;
     padding-left: 3%;
     font-size: 0.7rem;
 }
-.col_4 ul li {
+.col-md-3 ul li {
     color: #999;
 }
 
-footer .inner .col_wrap div:nth-child(2) ul li {
+footer .inner .col-md-3:nth-child(2) ul li {
     width: 50%;
     float: left;
 }
 
-footer .inner .col_wrap div:nth-child(2) ul li a {
+footer .inner .col-md-3:nth-child(2) ul li a {
     color: #fff;
     display: block;
     margin-bottom: 15px;
+    text-transform: capitalize;
 }
 footer .inner > div:first-child {
     background-color: #fab702;
@@ -608,16 +610,16 @@ footer .inner > div:first-child:before {
     border-color: transparent #777 #777 transparent;
     border-width: 15px 8px 0px 8px;
 }
-footer .inner .col_wrap div:nth-child(3) ul li {
+footer .inner .col-md-3:nth-child(3) ul li {
     padding-left: 27px;
     background-repeat: no-repeat;
     margin-bottom: 6px;
 }
-footer .inner .col_wrap div:nth-child(3) ul li.pick{background-image:url(../images/ico_pick.jpg);background-position: 3px 5px;}
-footer .inner .col_wrap div:nth-child(3) ul li.phone{background-image:url(../images/ico_phone.jpg);background-position: 3px 6px;}
-footer .inner .col_wrap div:nth-child(3) ul li.email{background-image:url(../images/ico_email.jpg);    background-position: 3px 6px;
+footer .inner .col-md-3:nth-child(3) ul li.pick{background-image:url(../images/ico_pick.jpg);background-position: 3px 5px;}
+footer .inner .col-md-3:nth-child(3) ul li.phone{background-image:url(../images/ico_phone.jpg);background-position: 3px 6px;}
+footer .inner .col-md-3:nth-child(3) ul li.email{background-image:url(../images/ico_email.jpg);    background-position: 3px 6px;
     background-size: auto 13px;}
-footer .inner .col_wrap div:nth-child(3) ul li.fax{background-image:url(../images/ico_fax.jpg);background-position: 1px 4px;}
+footer .inner .col-md-3:nth-child(3) ul li.fax{background-image:url(../images/ico_fax.jpg);background-position: 1px 4px;}
 footer .inner > div:first-child h5 {
     display: inline-block;
 }
@@ -625,16 +627,16 @@ footer ul.sns_list li a,footer ul.sns_list li a:hover {
     color: #333;
     border-color: #333;
 }
-.col_wrap {overflow: hidden;margin-left: -3%;}
-.col_4 ul li a{color:#fff}
+footer .inner .row {overflow: hidden;margin-left: -3%;}
+.col-md-3 ul li a{color:#fff}
 
-footer .inner .col_wrap div:nth-child(4) ul li {
+footer .inner .col-md-3:nth-child(4) ul li {
     border-bottom: 1px dotted #2d2d2d;
     line-height: 2.3rem;
     position: relative;
 }
-footer .inner .col_wrap div:nth-child(4) ul li:last-child{border-bottom:0;}
-footer .inner .col_wrap div:nth-child(4) ul li span {
+footer .inner .col-md-3:nth-child(4) ul li:last-child{border-bottom:0;}
+footer .inner .col-md-3:nth-child(4) ul li span {
     position: absolute;
     right: 0;
     font-weight: bold;

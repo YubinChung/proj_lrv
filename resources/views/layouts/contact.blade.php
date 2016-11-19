@@ -53,9 +53,9 @@
 @section('content')
 <div class="inner">
 	<h3 class="tit_st1">Contact Us</h3>
-	<div class="col_2_wrap">
+	<div class="row">
 		<div class="inner">
-			<div>
+			<div class="col-md-6">
 				<p>Call or submit our online form to request an estimate or for general questions about U.S. Certified Contractors and our services. We look forward to serving you!</p>
 				<form action="" method="post">
 					<div class="col_2_wrap">
@@ -75,14 +75,14 @@
 					<input type="submit" name="u_submit" value="Send Message" />
 				</form>
 			</div>
-			<div>
+			<div class="col-md-6">
 				<div class="col_2_wrap">
 					<div class="inner">
-						<div>
+						<div class="col-md-6">
 							<h3>Mailing Address</h3>
 							<p>1600 Amphitheatre Parkway<br>Mountain View CA 94043<br>United States</p>
 						</div>
-						<div>
+						<div class="col-md-6">
 							<h3>Contact Info</h3>
 							<p>+1 (312) 380-6650<br><a class="col_y" href="contact@construction.com">contact@construction.com</a><br><span class="col_y">@construction_llc</span></p>
 						</div>
