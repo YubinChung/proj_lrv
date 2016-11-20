@@ -10,6 +10,8 @@ class Post extends Model
 //		'title' => 'required',
 //		'body' => 'required'
 //	];
-	
-	protected $fillable = ['page_name', 'cat', 'title', 'body', 'thumbnail', 'link', 'video', 'iconclass', 'comments_count'];
+	public function images(){
+		return $this->hasOne('\App\Image');
+	}
+	//protected $fillable = ['page_name', 'cat', 'title', 'body', 'thumbnail', 'link', 'video', 'iconclass', 'comments_count'];
 }

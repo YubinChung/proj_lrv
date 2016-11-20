@@ -9,36 +9,31 @@
 		<div class="row">
 			<div class="col-md-3">
 				<h3>ABOUT COMPANY</h3>
-				@foreach ($aboutcompany as $company )
-				<p>{{ $company -> body }}</p>
-				@endforeach
+				{{-- @foreach ($aboutcompany as $company )
+				<p></p>
+				@endforeach --}}
 				<p></p>
 			</div>
 			<div class="col-md-3">
 				<h3>ABOUT COMPANY</h3>
 				<ul>
-					@foreach( $menu as $company )
-					<li><a href="{{ $company -> link }}">{{ $company -> title }}</a></li>
-					@endforeach
+					{{-- @foreach( $menu as $company )
+					<li><a href="{{ $company -> link }}"></a></li>
+					@endforeach --}}
 				</ul>
 			</div>
 			<div class="col-md-3">
 				<h3>CONSTRUCTION OFFICE</h3>
 				<ul>
 					{{-- @foreach ($office as $company )
-					<li><i class="{{$company -> iconclass}}"></i>{{ $company ->body }}</li>
-					@endforeach
-					--}}
+					<li><i class=""></i></li>
+					@endforeach--}}
 				</ul>		
 			</div>
 			<div class="col-md-3">
 				<h3>BUSINESS HOURS</h3>
 				<p>Our support available to help you 24 hours a day, seven days a week.</p>
-				<ul>
-					@foreach ($businesshours as $company )
-					<li>{{ $company -> desc }} :<span>{{ $company -> body }}</span></li>
-					@endforeach
-				</ul>		
+					
 			</div>
 		</div>
 	</div>

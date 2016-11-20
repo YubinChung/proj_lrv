@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<title>{{ $site_title }} | {{ $page_id }}</title>
+		<title></title>
 		<meta name="description" content="">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
@@ -13,12 +13,13 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" type="text/javascript"></script>
 		@yield('googlemap')
 	</head>
-	<body class="{{ 'body_'.$page_id }}">
-		
+	@foreach( $menus as $menu )
+	<body class="{{ ('body_'.$menu->slug) }}">
+	@endforeach
 		<header>
 			<section class="logo">
 				<div class="inner">
-				<h1><a href="/" class="logo" title="{{ $site_title }}"></a></h1>
+				<h1><a href="{{ url('/') }}" class="logo" title=""></a></h1>
 				</div>
 			</section>
 			<section class="sns">
@@ -26,9 +27,7 @@
 					<h5 class="tel"><span>Toll Free</span><a href="#">1.800.123.4567</a></h5>
 					@yield('home_emailus')
 					<ul class="sns_list">
-						@foreach( $companys_sns as $company )
-						<li><a href="{{ $company -> link }}"><i class="{{ $company -> iconclass }}"></i><span>{{ $company -> title }}</span></a></li>
-						@endforeach
+						
 					</ul>
 
 				</div>
@@ -36,8 +35,8 @@
 			<nav>
 				<div class="inner">
 				<ul>
-					@foreach( $menu as $company )
-					<li><a href="/{{ $company -> title }}">{{ $company -> title }}</a></li>
+					@foreach( $menus as $menu )
+					<li><a href="{{ url( '/'.$menu->slug )}}">{{ucfirst($menu-> title)}}</a></li>
 					@endforeach
 				</ul>
 				</div>
@@ -46,14 +45,14 @@
 		</header>
 		<section class="sub_header">
 			<div class="inner">
-				<h2>{{ $page_id }}</h2>
+				<h2></h2>
 				<a href="##" title="GET IN TOUCH">GET IN TOUCH</a>
 			</div>
 			<div class="breadcrumb">
 				<div class="inner">
 					<ul>
-						<li><a href="/" title="">{{ $site_title }}</a></li>
-						<li><a href="##" title="">{{ $page_id }}</a></li>
+						<li><a href="/" title=""></a></li>
+						<li><a href="##" title=""></a></li>
 					</ul>
 				</div>
 			</div>

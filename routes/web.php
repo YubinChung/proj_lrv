@@ -27,7 +27,10 @@ Route::resource('/post', 'PostController');
 
 // page
 //Route::resource('/{id?}', 'pageController' );
-Route::get('/', 'pageController@index');
+Route::get('/', 'MainController@index');
+Route::get('/menu', 'MenuController@index');
+
+
 Route::get('/{page_id}', 'pageController@page' );
 
 

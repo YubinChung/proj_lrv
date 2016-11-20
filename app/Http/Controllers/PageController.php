@@ -19,27 +19,10 @@ class PageController extends Controller
 		$menu = Company::where('page_name', '=', 'menu')->get();
 		$aboutcompany = Company::where('title', '=', 'about')->get();
 		$businesshours = Company::where('title', '=', 'businessHours')->get();
-		//$office = Company::where('title', '=', 'businessHours')->get();
 		
-//		post
-		$posts_home_main_con3 = Post::where('cat', '=', 'main_con3')->take(3)->orderBy('created_at', 'desc') ->get();
-		
-		
-		$posts_hasvideo = Post::where('video', null)-> get();
-//		if ($posts_hasvideo == 0){
-//			$posts_hasvideo == 0
-//			return $posts_hasvideo
-//		}
-		
-		
-		$posts_about = Post::where('page_name', '=', 'about')->take(3)->get();
-		$posts_news = Post::where('page_name', '=', 'news')->take(3)->orderBy('created_at', 'desc')->get();
-		$posts_uscc = Post::where('page_name', '=', 'uscc')->take(3)->orderBy('created_at', 'desc')->get();
-		$posts_oc = Post::where('page_name', '=', 'oc')->take(6)->get();
-		$posts_portfolio = Post::where('page_name', '=', 'portfolio')->take(3)->get();
-		$posts_testimonials = Post::where('page_name', '=', 'testimonials')->take(1)->get();
-		
-		
+		$posts_main = Post::where('post_id')
+
+	
 		return view('layouts.home', [
 			'page_id' => 'home', 
 			'site_title' => 'CONSRTUCTION', 
@@ -49,14 +32,7 @@ class PageController extends Controller
 			'menu' => $menu,
 			'aboutcompany' => $aboutcompany,
 			'businesshours' => $businesshours,
-			'posts_home_main_con3' => $posts_home_main_con3, 
-			'posts_hasvideo' => $posts_hasvideo,
-			'posts_about' => $posts_about, 
-			'posts_news' => $posts_news, 
-			'posts_uscc' => $posts_uscc,
-			'posts_oc' => $posts_oc,
-			'posts_portfolio' => $posts_portfolio,
-			'posts_testimonials' => $posts_testimonials
+			
 		]);
 		
 	}
