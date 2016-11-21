@@ -18,8 +18,8 @@
 			{{ url(Config::get('app.image.main').$service->images) }}
 			
 			
-			<article>
-				<a href="" class="video" title="video play">
+			<article class="col-md-4">
+				<a href="{{ url(Config::get('app.image.main').$service->images) }}" class="video" title="video play">
 					<figure><img src="" alt="{{ $service->title }}"></figure>
 				</a>
 				<h3>{{$service->title}}</h3>
@@ -61,15 +61,15 @@
 			<li><a href="#" class="next">&gt;</a></li>
 		</ul>
 		<div class="row">
-			{{-- @foreach($posts_about as $post)
+			@foreach($whatwedo as $wwd)
 			
 			<article class="col-md-4">
-				<figure><img src="" alt=""></figure>
-				<h3><a href="#"></a></h3>
-				<p></p>
+				<figure><img src="" alt="{{ $wwd -> title }}"></figure>
+				<h3><a href="#">{{ $wwd -> title }}</a></h3>
+				<p>{{ $wwd -> desc }}</p>
 				<a href="#" class="detail">SERVICE DETAIL</a>
 			</article>
-			@endforeach--}}
+			@endforeach
 			
 		</div>
 	</div>
@@ -84,14 +84,14 @@
 		</ul>
 		<div class="row">
 		
-			{{-- @foreach($posts_portfolio as $post)
+			@foreach($works as $work)
 			
 			<article class="col-md-4">
-				<figure><img src="" alt=""></figure>
-				<span><figcaption></figcaption>
+				<figure><img src="" alt="{{ $work -> title }}"></figure>
+				<span><figcaption>{{ $work -> title }}</figcaption>
 				<a href="#" class="btn_y">Read More</a></span>
 			</article>
-			@endforeach --}}
+			@endforeach
 		
 		</div>
 	</div>
@@ -104,20 +104,20 @@
 			<li><a href="#" class="next">&gt;</a></li>
 		</ul>
 		<div class="row">
-			{{-- @foreach($posts_news as $post)
+			@foreach($news as $ns)
 			
 			<article class="col-md-4">
 				<figure><a href="##"><img src="" alt=""></a></figure>
-				<h3><a href="##"></a></h3>
+				<h3><a href="##">{{ $ns -> title}}</a></h3>
 				<div class="news_meta">
-					<i class="fa fa-file-text-o"></i>
+					<i class="fa fa-file-text-o">{{ $ns -> created_at }}</i>
 					
 					<i class="fa fa-comments-o">0 Comments</i>
 				</div>
-				<p></p>
+				<p>{{ $ns -> desc}}</p>
 				<a href="#" title="detail" class="btn_st3">Read more</a>
 			</article>
-			@endforeach --}}
+			@endforeach
 			
 		</div>
 	</div>
@@ -128,23 +128,23 @@
 			<div class="inner">
 				<h3 class="tit_st1">Our Clients</h3>
 				<div class="row">
-					{{-- @foreach($posts_oc as $post)
+					@foreach($ourclients as $oc)
 					<div class="col-md-4">
-						<a href="#"><img src="" alt=""></a>
+						<a href="#"><img src="" alt="{{ $oc -> title }}"></a>
 					</div>
-					@endforeach --}}
+					@endforeach
 				</div>
 			</div>
 		</div>
 		<div class="main_tm col-md-6">
 			<div class="inner">
 				<h3 class="tit_st1">Testimonials</h3>
-				{{-- @foreach($posts_testimonials as $post)
+				@foreach($testimonials as $tstmonial)
 				<div>
-					<p></p>
-					<span class="main_tm_profile"><img src="" alt="profile img"><h5></h5></span>
+					<p>{{ $tstmonial -> desc }}</p>
+					<span class="main_tm_profile"><img src="" alt="profile img"><h5>{{ $tstmonial -> title }}</h5></span>
 				</div>
-				@endforeach --}}
+				@endforeach
 			</div>
 		</div>
 	</div>

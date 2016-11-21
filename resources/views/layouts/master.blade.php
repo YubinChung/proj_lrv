@@ -13,9 +13,9 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" type="text/javascript"></script>
 		@yield('googlemap')
 	</head>
-	@foreach( $menus as $menu )
-	<body class="{{ ('body_'.$menu->slug) }}">
-	@endforeach
+	
+	<body class="{{ ('body_'.$page_id) }}">
+	
 		<header>
 			<section class="logo">
 				<div class="inner">
@@ -45,14 +45,14 @@
 		</header>
 		<section class="sub_header">
 			<div class="inner">
-				<h2></h2>
+				<h2>{{$page_id}}</h2>
 				<a href="##" title="GET IN TOUCH">GET IN TOUCH</a>
 			</div>
 			<div class="breadcrumb">
 				<div class="inner">
 					<ul>
-						<li><a href="/" title=""></a></li>
-						<li><a href="##" title=""></a></li>
+						<li><a href="{{ url('/')}}" title="{{ $site_title }}">{{ $site_title }}</a></li>
+						<li><a href="javascript:void(0);" title="{{ucfirst($page_id)}}">{{ucfirst($page_id)}}</a></li>
 					</ul>
 				</div>
 			</div>

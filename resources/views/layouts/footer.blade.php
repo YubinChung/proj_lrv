@@ -17,9 +17,9 @@
 			<div class="col-md-3">
 				<h3>ABOUT COMPANY</h3>
 				<ul>
-					{{-- @foreach( $menu as $company )
-					<li><a href="{{ $company -> link }}"></a></li>
-					@endforeach --}}
+					@foreach( $menus as $menu )
+					<li><a href="{{ url( '/'.$menu->slug )}}">{{ucfirst($menu-> title)}}</a></li>
+					@endforeach
 				</ul>
 			</div>
 			<div class="col-md-3">

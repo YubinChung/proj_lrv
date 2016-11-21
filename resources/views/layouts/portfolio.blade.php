@@ -11,14 +11,14 @@
 		<li><a href="#" title="">Office</a></li>
 	</ul>	
 	<div class="row">
-		@foreach($posts as $post)
+		@foreach($works as $work)
 		<article class="col-md-4">
-			<figure><img src="uploads/thumb/{{ $post->thumbnail }}" alt=""></figure>
-			<span><figcaption>{{ $post->title }}</figcaption>
+			<figure><img src="" alt=""></figure>
+			<span><figcaption>{{ $work->title }}</figcaption>
 			<a href="#" class="btn_y">Read More</a></span>
 		</article>
 		@endforeach
 	</div>
-	{!! $posts->render() !!}
+	{!! $works->render() !!}
 	</div>
 @endsection

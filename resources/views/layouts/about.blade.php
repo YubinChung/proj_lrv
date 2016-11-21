@@ -3,18 +3,16 @@
 @section('content')
 <div class="inner">
 	<div class="row">
-		@foreach($posts as $post)
+		@foreach($abouts as $about)
 		<article class="col-md-4">
-			
-			<figure><a href="##"><img src="uploads/thumb/{{ $post->thumbnail }}" alt="{{ $post->title }} image"></a></figure>
-			<h3><a href="##">{{ $post->title }}</a></h3>
-				<p>{{ $post->body }}</p>
+			<figure><a href="##"><img src="" alt="{{ $about->title }} image"></a></figure>
+			<h3><a href="##">{{ $about->title }}</a></h3>
+				<p>{{ $about->desc }}</p>
 			<a href="#" title="detail">VIEW SERVICE DETAIL</a>
-			
 		</article>
 		@endforeach
 
 	</div>
-	{!! $posts->render() !!}
+	{{-- {!! $about->render() !!} --}}
 </div>
 @endsection

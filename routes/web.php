@@ -23,12 +23,16 @@ Route::post('/todo/{id}', ['as' => 'todo', 'uses' =>'TodoController@destroy']);
 // board 
 Route::resource('/post', 'PostController');
 
-
+// menu
+Route::get('/menu', 'MenuController@index');
+Route::post('/menu', 'MenuController@store');
 
 // page
-//Route::resource('/{id?}', 'pageController' );
 Route::get('/', 'MainController@index');
-Route::get('/menu', 'MenuController@index');
+Route::get('/home', 'MainController@index');
+//Route::get('/menu', 'MenuController@index');
+Route::get('/{id?}', 'pageController@page' );
+
 
 
 Route::get('/{page_id}', 'pageController@page' );
