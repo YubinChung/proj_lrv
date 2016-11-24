@@ -15,12 +15,12 @@
 		</span>
 		<div class="row article_wrap cf">
 			@foreach($services as $service)
-			{{ url(Config::get('app.image.main').$service->images) }}
+			{{ url(Config::get('app.image.main').$service->images->name) }}
 			
 			
 			<article class="col-md-4">
-				<a href="{{ url(Config::get('app.image.main').$service->images) }}" class="video" title="video play">
-					<figure><img src="" alt="{{ $service->title }}"></figure>
+				<a href="{{ url(Config::get('app.image.main').$service->images->name) }}" class="video" title="video play">
+					<figure><img src="{{ url(Config::get('app.image.main').$service->images->name) }}" alt="{{ $service->title }}"></figure>
 				</a>
 				<h3>{{$service->title}}</h3>
 				<p>{{$service->desc}}</p>

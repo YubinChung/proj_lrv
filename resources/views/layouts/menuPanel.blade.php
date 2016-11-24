@@ -33,15 +33,18 @@
 					</tr>
 				</thead>
 				<tbody>
-					@foreach( $menus as $menu )
+					@foreach( $menuspanel as $menupanel )
 					<tr>
-						<th>{{ $menu -> id }} </th>
-						<td>{{ucfirst($menu-> title)}}</td>
-						<td>{{ ( '/'.$menu->slug )}}</td>
-						<td>{{ $menu -> status}}</td>
+						<th>{{ $menupanel -> id }} </th>
+						<td>{{ucfirst($menupanel-> title)}}</td>
+						<td>{{ ( '/'.$menupanel->slug )}}</td>
+						<td>{{ $menupanel -> status}}</td>
 						<td>
-							<input type="hidden" name="_method" value="DELETE">
-							<input type="submit" value="수정">
+							<form action="/menu/{{ $menupanel-> id }}" method="post">
+								<input type="hidden" name="_method" value="DELETE">
+								<input type="hidden" name="_token" value="{{ csrf_token() }}">
+								<input type="submit" value="삭제">
+							</form>
 						</td>
 					<tr>
 					@endforeach
