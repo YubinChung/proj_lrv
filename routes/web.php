@@ -26,7 +26,10 @@ Route::resource('/post', 'PostController');
 // menu
 Route::get('/menu', 'MenuController@index');
 Route::post('/menu', 'MenuController@store');
-Route::post('/menu/{id?}', 'MenuController@destroy');
+Route::get('/menu/delete', 'MenuController@destroy');
+//Route::post('/menu/{id?}/edit', 'MenuController@edit');
+
+Route::resource('/menu', 'MenuController');
 
 // page
 Route::get('/', 'MainController@index');
