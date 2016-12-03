@@ -636,3 +636,6 @@ footer .inner .col-md-3:nth-child(4) ul li span {
     font-weight: bold;
     color: #ababab;
 }
+
+/* menu */
+.ui-state-highlight { height: 1.5rem;line-height:1.5em;background-color:#fab702}

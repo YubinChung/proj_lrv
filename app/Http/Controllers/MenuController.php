@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Menu;
 use DB;
+use Validator;
 
 class MenuController extends Controller
 {
@@ -21,6 +22,12 @@ class MenuController extends Controller
 	
 	public function store(Request $request)
 	{
+		$validator = Validator::make($request->all(), Menu::$rules);      
+    	if($validator->fails()){
+			return redirect('/menu')->withErrors($validator->errors())->withInput();
+			
+		}
+		
 		$data['menuspanel'] = Menu::all();
 		
 		if($request->id){ $menus = Menu::find($request->id);
@@ -29,7 +36,7 @@ class MenuController extends Controller
 			
 		}else{
 			$menu = new Menu();
-			$menu->id = count($menu)+1;
+			$menu->order = Menu::count();
 		}
 		
 		$menu->title = $request->title;
@@ -37,17 +44,13 @@ class MenuController extends Controller
 		$menu->status = $request->status == null ? 'unpublished' : 'published';
 		$menu->save();
 		
-		$data['menus'] = $this->menu;
-		return view('layouts.menuPanel', $data);
+		$data['menus'] = Menu::where('status','=','published')->get();
 		
-//		$menu = new Menu();
-//		$menu->title = $request->title;
-//		$menu->slug = $request->slug;
-//		$menu->status = $status;
-//		$menu->id = $menu->count()+1;
-//		$menu->save();
-
 		return back();
+//		return view('layouts.menuPanel', $data, [
+//			'page_id' => 'menupanel',
+//			'site_title' => 'CONSRTUCTION'
+//		]);
 		
 	}
 	
